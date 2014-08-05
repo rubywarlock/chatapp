@@ -1,0 +1,15 @@
+HAML
+%br
+
+=form_tag chat_incoming_path, :name => "message", remote: true do
+	%div.chat-room
+	%p
+		%label{:for => 'nick'} nick
+		%input{:type => 'text', :name => 'nick'}
+
+	%p
+		%label{:for => 'message'} message
+		%input{:type => 'text', :name => 'message'}
+
+	%p
+		%input{:type => 'submit', :value => 'send'}
