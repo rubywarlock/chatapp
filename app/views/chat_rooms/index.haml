@@ -3,9 +3,10 @@ HAML
 
 =form_tag chat_incoming_path, :name => "message", remote: true do
 	%div.chat-room
-	%p
-		%label{:for => 'nick'} nick
-		%input{:type => 'text', :name => 'nick'}
+	/
+		%p
+			%label{:for => 'nick'} user id
+			%input{:type => 'text', :user_id => 'user_id'}
 
 	%p
 		%label{:for => 'message'} message

@@ -29,7 +29,7 @@ $ ->
 
 	setInterval ->
 		$.ajax
-			url: 'http://localhost:3000/chat/outgoing'
+			url: 'http://localhost:3000/chat/output'
 			method: 'GET'
 			dataType: 'json'
 			data:
@@ -38,7 +38,7 @@ $ ->
 				for messageObject in data
 					messageRow = $("<div class='message'></div>")
 					timestamp = $("<span class='timestamp'></span>")
-					timestamp.text(messageObject.time)
+					timestamp.text(messageObject.time + ": ")
 
 					nick = $("<span class='nick'></span>")
 					nick.text(messageObject.nick)

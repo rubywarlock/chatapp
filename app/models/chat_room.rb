@@ -1,4 +1,5 @@
 class ChatRoom < ActiveRecord::Base
+	belongs_to :user
 	def time
 		created_at.strftime('%-d/%-m/%y %H:%M')
 	end
