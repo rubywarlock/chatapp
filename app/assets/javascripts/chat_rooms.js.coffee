@@ -7,14 +7,14 @@ $ ->
 	chat_window = $('.chat-room')
 
 	scrollDown = ->
-		chat_height = chat_window[0].scrollHeight
+		chat_height = chat_window.scrollHeight
 		chat_window.scrollTop(chat_height)
 
 	scrollDown()
 
 	$('[type=submit]').click (e) ->
-		nick = $('[name=message[nick]]')
-		message = $('[name=message[mesage]]')
+		#nick = $('[name=message[nick]]')
+		message = $('[name=[message]]')
 		e.preventDefault()
 
 		$.ajax

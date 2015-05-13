@@ -31,8 +31,8 @@ class ChatRoomsController < ApplicationController
 	end
 
 	def output
-		@room = ChatRoom.where(["id > ?", params[:last_id]]).order("created_at ASC, id ASC")
+		@message = ChatRoom.where(["id > ?", params[:last_id]]).order("created_at ASC, id ASC")
 		#@user = User.where("id = ?", @room.user_id)
-		render :json => @room
+		render :json => @message
 	end
 end
